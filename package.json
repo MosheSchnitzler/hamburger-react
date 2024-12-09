@@ -2,9 +2,6 @@
   "name": "hamburger-react",
   "version": "2.5.1",
   "description": "Animated hamburger menu icons for React",
-  "homepage": "https://hamburger-react.netlify.app",
-  "repository": "luukdv/hamburger-react",
-  "bugs": "https://github.com/luukdv/hamburger-react/issues",
   "license": "MIT",
   "author": {
     "name": "Luuk de Vlieger",
@@ -40,7 +37,7 @@
   "types": "dist-types/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build:cjs": "BUILD_TYPE=cjs babel src --extensions '.ts,.tsx' --out-dir dist-cjs",
+    "build:cjs": "cross-env BUILD_TYPE=cjs babel src --extensions '.ts,.tsx' --out-dir dist-cjs",
     "build:esm": "babel src --extensions '.ts,.tsx' --out-dir dist-esm",
     "build:types": "tsc --emitDeclarationOnly",
     "build": "run-p build:cjs build:esm build:types",
@@ -50,7 +47,6 @@
     "test": "jest",
     "ts": "tsc --noEmit"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.8",
@@ -62,6 +58,7 @@
     "@testing-library/react": "^13.0.0",
     "@types/react": "^17.0.43",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
+    "cross-env": "^7.0.3",
     "jest": "^27.5.1",
     "npm-run-all": "^4.1.5",
     "react": "^18.0.0",
